@@ -46,6 +46,7 @@ segwit_public_key = '029f59c6c043ce7bf41d6b2206077b3fff513fa06564ca143e36948b2c5
 
 print('The segwit address is', Address.segwit_address(segwit_public_key))
 print()
+print('prova')
 
 
 
