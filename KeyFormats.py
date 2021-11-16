@@ -2,7 +2,6 @@
 import hashlib
 import typing
 import Weierstrass
-from hashlib import sha256
 from binascii import unhexlify
 from base58 import b58encode
 

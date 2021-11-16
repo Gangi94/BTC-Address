@@ -1,5 +1,4 @@
-# In questo file otterremo gli address per le transazioni bitcoin P2PKH P2SH, P2WPKH e infine vedremo come
-# generare vanity addresses
+# This file generates any kind of Bitcoin address
 
 import Weierstrass
 import hashlib
