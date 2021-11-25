@@ -1,7 +1,9 @@
+import EthAddress
 import Weierstrass
 import KeyFormats
 import Address
 import time
+import sha3
 
 
 # Private_key examples (taken from the Mastering Bitcoin book)
@@ -47,9 +49,20 @@ print('The segwit address is', Address.segwit_address(segwit_public_key))
 print()
 
 
-# Vanity address computation
-vanity_string = 'k'
+print('ETHEREUM ADDRESSES')
+ethPrivKey = '48a28a1df6233d1c76909b30b5957f2167a7d59e8dc7735d34479a6ee5fae05e'
+ethPubKey = EthAddress.public_key_gen(ethPrivKey)
+ethAddress = EthAddress.account_address_gen(ethPubKey)
+print('The Ethereum private key is', ethPrivKey)
+print('The Ethereum public key is', ethPubKey)
+print('The Ethereum address (without encoding) is', ethAddress)
+print('The Ethereum address (with encoding) is', EthAddress.EIP55encode(ethAddress))
+print()
 
+
+# Vanity address computation
+#vanity_string = 'k'
+print()
 # start = time.time()
 # print('The vanity address is', Address.vanity_address_generator(vanity_string))
 # end = time.time()
